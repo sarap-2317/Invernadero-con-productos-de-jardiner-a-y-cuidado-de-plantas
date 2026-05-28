@@ -57,3 +57,138 @@ setInterval(() => {
     moveSlide("track1", "dots1", 1);
     moveSlide("track2", "dots2", 1);
 }, 3000);
+
+// Lógica barra de búsqueda global
+const MAPA_SITIO = [
+    {
+        nombre: "Inicio",
+        url: "index.html",
+        keywords: [
+            "inicio",
+            "home",
+            "bienvenida",
+            "sara",
+            "invernadero",
+            "principal",
+            "plantas",
+            "jardineria",
+            "jardinería"
+        ]
+    },
+    {
+        nombre: "Servicios",
+        url: "servicios.html",
+        keywords: [
+            "servicios",
+            "jardineria",
+            "jardinería",
+            "mantenimiento",
+            "riego",
+            "poda",
+            "plagas",
+            "fertilizacion",
+            "fertilización",
+            "decoracion",
+            "decoración"
+        ]
+    },
+    {
+        nombre: "Venta de Plantas",
+        url: "venta-plantas.html",
+        keywords: [
+            "venta",
+            "plantas",
+            "catalogo",
+            "catálogo",
+            "sol",
+            "sombra",
+            "luz indirecta",
+            "pothos",
+            "monstera",
+            "lavanda",
+            "orquidea",
+            "orquídea",
+            "helecho",
+            "ficus",
+            "romero",
+            "girasol"
+        ]
+    },
+    {
+        nombre: "Diseños de Jardín",
+        url: "disenos-jardin.html",
+        keywords: [
+            "diseños",
+            "disenos",
+            "diseño",
+            "diseno",
+            "jardin",
+            "jardín",
+            "zen",
+            "vertical",
+            "ecologico",
+            "ecológico",
+            "pequeño",
+            "pequeno",
+            "grande",
+            "terraza"
+        ]
+    },
+    {
+        nombre: "Contáctanos",
+        url: "contactanos.html",
+        keywords: [
+            "contacto",
+            "contactanos",
+            "contáctanos",
+            "telefono",
+            "teléfono",
+            "whatsapp",
+            "instagram",
+            "correo",
+            "solicitud",
+            "mensaje"
+        ]
+    }
+];
+
+function ejecutarBusqueda() {
+    const inputBuscar = document.querySelector(".search-bar");
+
+    if (!inputBuscar) return;
+
+    const termino = inputBuscar.value.toLowerCase().trim();
+
+    if (!termino) {
+        alert("Escribe algo para buscar.");
+        return;
+    }
+
+    const destino = MAPA_SITIO.find(pagina =>
+        pagina.nombre.toLowerCase().includes(termino) ||
+        pagina.keywords.some(keyword => keyword.toLowerCase().includes(termino))
+    );
+
+    if (destino) {
+        window.location.href = destino.url;
+    } else {
+        alert("No se encontró la sección. Intenta con: plantas, servicios, jardín o contacto.");
+    }
+}
+
+// Asignamos eventos clic y Enter
+const btnBuscar = document.querySelector(".search-btn");
+
+if (btnBuscar) {
+    btnBuscar.addEventListener("click", ejecutarBusqueda);
+}
+
+const inputBuscar = document.querySelector(".search-bar");
+
+if (inputBuscar) {
+    inputBuscar.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            ejecutarBusqueda();
+        }
+    });
+}
