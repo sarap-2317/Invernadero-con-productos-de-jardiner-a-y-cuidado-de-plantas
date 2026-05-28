@@ -33,7 +33,7 @@ body {
     transform: translateY(-2px);
 }
 
-/**/
+
 .header {
     background-color: #ffffff;
     color: #4b3c4f;
@@ -50,6 +50,7 @@ body {
     align-items: center;
 }
 
+/**/
 .logo-img{
     width: 95px;
     height: 95px;
