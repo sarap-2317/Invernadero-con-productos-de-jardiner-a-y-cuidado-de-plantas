@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sara Invernadero | Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="img/principal/logo.jpeg" alt="Sara Invernadero" class="logo-img">
+    </div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="venta-plantas.html">Venta de Plantas</a></li>
+            <li><a href="disenos-jardin.html">Diseños de Jardín</a></li>
+            <li><a href="contactanos.html">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <div class="search-container">
+        <input type="search" placeholder="Buscar plantas..." class="search-bar">
+        <button class="search-btn">
+            <img src="iconos/lupa.png" alt="Buscar" class="search-icon-img">
+        </button>
+    </div>
+</header>
+
+<main class="main-index">
+
+    <section class="hero-full">
+        <div class="hero-content">
+            <h2>Transforma tu hogar con vida y naturaleza</h2>
+            <p>
+                En Sara Invernadero encontrarás plantas, productos de jardinería
+                y diseños de jardín para crear espacios frescos, modernos y llenos de vida.
+            </p>
+            <a href="venta-plantas.html" class="cta-button">Ver plantas</a>
+        </div>
+    </section>
+
+    <section class="carousels-section">
+        <div class="text-center">
+            <h2>Nuestros Servicios Destacados</h2>
+            <p>Explora nuestras opciones para decorar, cuidar y transformar tus espacios verdes.</p>
+        </div>
+
+        <div class="carousels-wrapper">
+
+    <div class="carousel-container">
+        <div class="carousel-track" id="track1">
+            <img src="img/servicios/1s.jpg" class="carousel-slide active" alt="Servicio de jardinería">
+            <img src="img/plantas/2pothos.jpg" class="carousel-slide" alt="Venta de plantas">
+            <img src="img/servicios/3s.jpg" class="carousel-slide" alt="Cuidado de plantas">
+            <img src="img/diseños_jardin/jdardinzen.jpg" class="carousel-slide" alt="Jardín zen">
+            <img src="img/servicios/5s.jpg" class="carousel-slide" alt="Macetas y accesorios">
+        </div>
+
+        <button class="carousel-btn prev" onclick="moveSlide('track1', 'dots1', -1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveSlide('track1', 'dots1', 1)">&#10095;</button>
+
+        <div class="carousel-indicators" id="dots1">
+            <span class="dot active" onclick="jumpToSlide('track1', 'dots1', 0)"></span>
+            <span class="dot" onclick="jumpToSlide('track1', 'dots1', 1)"></span>
+            <span class="dot" onclick="jumpToSlide('track1', 'dots1', 2)"></span>
+            <span class="dot" onclick="jumpToSlide('track1', 'dots1', 3)"></span>
+            <span class="dot" onclick="jumpToSlide('track1', 'dots1', 4)"></span>
+        </div>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel-track" id="track2">
+            <img src="img/servicios/2s.jpg" class="carousel-slide active" alt="Diseño de jardín">
+            <img src="img/plantas/10.jpg" class="carousel-slide" alt="Planta decorativa">
+            <img src="img/servicios/4s.jpg" class="carousel-slide" alt="Decoración natural">
+            <img src="img/diseños_jardin/pequeño.jpg" class="carousel-slide" alt="Jardín pequeño">
+            <img src="img/servicios/6s.jpg" class="carousel-slide" alt="Invernadero">
+        </div>
+
+        <button class="carousel-btn prev" onclick="moveSlide('track2', 'dots2', -1)">&#10094;</button>
+        <button class="carousel-btn next" onclick="moveSlide('track2', 'dots2', 1)">&#10095;</button>
+
+        <div class="carousel-indicators" id="dots2">
+            <span class="dot active" onclick="jumpToSlide('track2', 'dots2', 0)"></span>
+            <span class="dot" onclick="jumpToSlide('track2', 'dots2', 1)"></span>
+            <span class="dot" onclick="jumpToSlide('track2', 'dots2', 2)"></span>
+            <span class="dot" onclick="jumpToSlide('track2', 'dots2', 3)"></span>
+            <span class="dot" onclick="jumpToSlide('track2', 'dots2', 4)"></span>
+        </div>
+    </div>
+
+</div>
+
+        </div>
+
+
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col logo-col">
+            <img src="img/principal/logo.jpeg" class="footer-logo-img" alt="Sara Invernadero">
+
+            <div class="social-links">
+                <a href="#" class="social-icon"><img src="iconos/instagram.png" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="iconos/tik-tok.png" alt="TikTok"></a>
+                <a href="#" class="social-icon"><img src="iconos/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+        </div>
+
+        <div class="footer-col links-col">
+            <h3>Información</h3>
+            <ul>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="venta-plantas.html">Venta de Plantas</a></li>
+                <li><a href="disenos-jardin.html">Diseños de Jardín</a></li>
+                <li><a href="contactanos.html">Contáctanos</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col contact-col">
+            <h3>Contacto</h3>
+
+            <table class="contact-table">
+                <tr>
+                    <td class="icon-cell">
+                        <img src="iconos/telefono.png" class="contact-icon-img" alt="Teléfono">
+                    </td>
+                    <td>Teléfono <br><small>+52 4423366520</small></td>
+                </tr>
+
+                <tr>
+                    <td class="icon-cell">
+                        <img src="iconos/instagram.png" class="contact-icon-img" alt="Instagram">
+                    </td>
+                    <td>Instagram <br><small>@SaraInvernadero</small></td>
+                </tr>
+
+                <tr>
+                    <td class="icon-cell">
+                        <img src="iconos/whatsapp.png" class="contact-icon-img" alt="WhatsApp">
+                    </td>
+                    <td>WhatsApp <br><small>+52 4423366520</small></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>
+            Todos los derechos reservados. 2026 &copy; Sara Invernadero |
+            <a href="#">Aviso de privacidad</a> |
+            <a href="#">Términos y condiciones</a>
+        </p>
+    </div>
+</footer>
+
+<script src="global.js"></script>
+
+</body>
+</html>
