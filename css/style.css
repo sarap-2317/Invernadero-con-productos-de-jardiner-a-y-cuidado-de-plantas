@@ -51,11 +51,7 @@ body {
     align-items: center;
 }
 
-.logo-img {
-    height: 95px;
-    width: auto;
-    object-fit: contain;
-}
+
 
 .navbar ul {
     list-style: none;
